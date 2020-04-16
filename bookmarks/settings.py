@@ -25,6 +25,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Social Auth App
+    'social_django',
+    # Django Extension
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -119,20 +123,20 @@ LOGOUT_URL = 'logout'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
-# AUTHENTICATION_BACKENDS = [
-#     'django.contrib.auth.backends.ModelBackend',
-#     'account.authentication.EmailAuthBackend',
-#     'social_core.backends.facebook.FacebookOAuth2',
-#     'social_core.backends.twitter.TwitterOAuth',
-#     'social_core.backends.google.GoogleOAuth2',
-# ]
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
+]
 
-# SOCIAL_AUTH_FACEBOOK_KEY = '' # Facebook App ID
-# SOCIAL_AUTH_FACEBOOK_SECRET = '' # Facebook App Secret
-# SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_KEY = '563388994308191' # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '369430ae30721a5c31cddb007c18d510' # Facebook App Secret
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 
-# SOCIAL_AUTH_TWITTER_KEY = '' # Twitter API Key
-# SOCIAL_AUTH_TWITTER_SECRET = '' # Twitter API Secret
+SOCIAL_AUTH_TWITTER_KEY = 'dwh1nat1L3pyI4HfjJJEWB2wJ' # Twitter API Key
+SOCIAL_AUTH_TWITTER_SECRET = 'nFNXTm5c4NNZImEiluahSKggqwadrRgAdqE92gXulkmQ4X1ILQ' # Twitter API Secret
 
-# SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '' # Google Consumer Key
-# SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '' # Google Consumer Secret
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '345438842458-n918cm10smdef4tg0gu0gd3sqbhlvals.apps.googleusercontent.com' # Google Consumer Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'utD_RWWIAZqEmKeOu9CS2kwE' # Google Consumer Secret
