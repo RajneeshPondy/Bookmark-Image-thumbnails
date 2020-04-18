@@ -18,13 +18,15 @@ ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'account.apps.AccountConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Custom App
+    'images.apps.ImagesConfig',
+    'account.apps.AccountConfig',
     # Social Auth App
     'social_django',
     # Django Extension
@@ -140,3 +142,7 @@ SOCIAL_AUTH_TWITTER_SECRET = 'nFNXTm5c4NNZImEiluahSKggqwadrRgAdqE92gXulkmQ4X1ILQ
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '345438842458-n918cm10smdef4tg0gu0gd3sqbhlvals.apps.googleusercontent.com' # Google Consumer Key
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'utD_RWWIAZqEmKeOu9CS2kwE' # Google Consumer Secret
+
+
+# To run server with https
+# python manage.py runserver_plus --cert-file cert.crt
